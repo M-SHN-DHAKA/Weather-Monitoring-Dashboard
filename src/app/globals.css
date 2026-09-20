@@ -1,0 +1,153 @@
+/* Bootstrap is imported in layout.js, not here — so only custom CSS goes below */
+
+:root {
+  --primary-bg: #0f172a;
+  --card-bg: #1e293b;
+  --text-light: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent-color: #38bdf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-light);
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* ----- Main container ----- */
+.weather-dashboard {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* ----- Search bar ----- */
+.search-bar-wrapper {
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  background-color: var(--card-bg);
+  border: 1px solid #334155;
+  color: var(--text-light);
+}
+
+.search-input:focus {
+  background-color: var(--card-bg);
+  color: var(--text-light);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.2rem rgba(56, 189, 248, 0.25);
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* ----- Current weather card ----- */
+.current-weather-card {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.current-weather-card .city-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.current-weather-card .temperature {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.current-weather-card .weather-description {
+  color: var(--text-muted);
+  text-transform: capitalize;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+}
+
+/* ----- Hourly forecast ----- */
+.hourly-forecast-wrapper {
+  margin-bottom: 2rem;
+}
+
+.hourly-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.hourly-card {
+  background-color: var(--card-bg);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  min-width: 90px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.hourly-card .hour-time {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hourly-card .hour-temp {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* ----- Daily forecast ----- */
+.daily-forecast-wrapper .daily-card {
+  background-color: var(--card-bg);
+  border-radius: 0.75rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.daily-card .day-name {
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.daily-card .day-temp-range {
+  color: var(--text-muted);
+}
+
+/* ----- Error / loading states ----- */
+.status-message {
+  text-align: center;
+  color: var(--text-muted);
+  margin: 2rem 0;
+}
+
+/* ----- Scrollbar styling (optional, cosmetic) ----- */
+.hourly-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.hourly-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 3px;
+}

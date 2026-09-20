@@ -1,0 +1,42 @@
+
+Page.js File: 
+> navigator.geolocation browser built-in object
+> getCurrentPosition is  Geolocation object  built-in method. 
+Syntax: navigator.geolocation.getCurrentPosition(successCallback, errorCallback, options );
+> position.coords is Geolocation API, browser built-in object
+>
+> currentWeather.name লিখে আমরা কী করছি, এটা শুধু object property access.
+name হলো OpenWeatherMap-এর current weather response-এর একটা key, যেটাতে তাদের ডেটাবেজ অনুযায়ী সেই coordinates-এর সবচেয়ে কাছের শহরের নাম থাকে।
+> সার্চ বক্সে শহরের নাম লিখলে name key OpenWeatherMap থেকে বের করার দরকারই পড়ে না — কারণ আপনি নিজেই city name সরাসরি দিয়ে দিচ্ছেন।
+> দুটো ভিন্ন পথ (flow), আমাদের page.js-এ দুটো আলাদা ফাংশন আছে
+>
+>>
+HourlyForecast.js File: 
+> HourlyForecast({forecastData}),  props "forecastData" value set in the page.js file
+> dt(date-time), OpenWeatherMap API forecast response. Like "dt": 1758345600,
+hour: 'numeric', minute: '2-digit' JavaScript built-in ফিচার
+> icon, OpenWeatherMap API response-এর ভেতরে থাকা key
+>>
+CurrentWeather.js File: 
+CurrentWeather({weatherData}), props weatherData value set in the page.js file
+weather, OpenWeatherMap API response key
+
+
+>>
+DailyForecast.js File: 
+
+
+
+
+>>
+Weather.js File: 
+
+
+
+
+>>
+Globals.css File: 
+
+
+
+
