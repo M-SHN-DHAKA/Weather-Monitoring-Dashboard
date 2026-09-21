@@ -90,3 +90,7 @@ The `NEXT_PUBLIC_` prefix is required because the key is read on the client side
 ## License
 
 This project is for personal/educational use.
+
+
+## Live Demo 
+This project is live at: https://weather-monitoring-dashboard-green.vercel.app

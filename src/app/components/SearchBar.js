@@ -23,7 +23,7 @@ export default function SearchBar({ onSearch }) {
         <input
           type="text"
           className="form-control search-input"
-          placeholder="Write your city name e.g.: Dhaka, London)"
+          placeholder="Write your city name e.g.: Dhaka, London"
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />
